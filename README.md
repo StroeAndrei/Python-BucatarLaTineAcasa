@@ -1,6 +1,6 @@
 # Bucatar la tine acasa
 ### Tehnologii folosite: python, flask, javascript, html, css
-Un website construit pentru un bucatar care ofera servicii personalizate de "bucatar la tine acasa".<br/><br/>
+Un website construit pentru un bucatar care ofera servicii personalizate de "bucatar la tine acasa". Aplicatia foloseste un template obtinut de la [Mashup](http://www.mashup-template.com/)<br/><br/>
 
 ### Instructiuni
 Descarcam aplicatia si extragem fisierele intr-un dosar. Din linia de comanda ne deplasam in dosarul aplicatiei
@@ -13,19 +13,19 @@ doua variabile de mediu, una pentru adresa de email si cealalta pentru parola cu
 GMAIL_PASS_AFU.
 
 Homepage
-![homepage](https://github.com/StroeAndrei/PYTHON/blob/master/Projects/bucatarLaTineAcasa/screenshots/homepage.png)<br/>
+![homepage](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/homepage.PNG)<br/>
 
 Servicii
-![servicii](https://github.com/StroeAndrei/PYTHON/blob/master/Projects/bucatarLaTineAcasa/screenshots/servicii.PNG)<br/>
+![servicii](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/servicii.PNG)<br/>
 
 Contact
-![contact](https://github.com/StroeAndrei/PYTHON/blob/master/Projects/bucatarLaTineAcasa/screenshots/contact.PNG)<br/>
+![contact](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/contact.PNG)<br/>
 
 Odata utilizat formularul de contact, bucatarul va primi pe adresa de email mesajele corespunzatoare
-![mesaje](https://github.com/StroeAndrei/PYTHON/blob/master/Projects/bucatarLaTineAcasa/screenshots/mesaje_primite.PNG)<br/>
+![mesaje](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/mesaje_primite.PNG)<br/>
 
 De asemenea datele vor fi salvate pentru o utilizare ulterioara (extragere adrese de email) intr-un fisier Excel
-![mesaje](https://github.com/StroeAndrei/PYTHON/blob/master/Projects/bucatarLaTineAcasa/screenshots/mesaje_excel.PNG)<br/>
+![mesaje](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/mesaje_excel.PNG)<br/>
 
 
 
