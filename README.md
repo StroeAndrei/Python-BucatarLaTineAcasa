@@ -1,6 +1,6 @@
 # Bucatar la tine acasa
 ### Tehnologii folosite: python, flask, javascript, html, css
-Un website construit pentru un bucatar care ofera servicii personalizate de "bucatar la tine acasa". Aplicatia foloseste un template obtinut de la [Mashup](http://www.mashup-template.com/)<br/><br/>
+Un website construit pentru un bucatar care ofera servicii personalizate de "bucatar la tine acasa". Aplicatia foloseste un template obtinut de la [Mashup](http://www.mashup-template.com/). <br/>
 
 ### Instructiuni
 - Descarcam aplicatia si extragem fisierele intr-un dosar. 
