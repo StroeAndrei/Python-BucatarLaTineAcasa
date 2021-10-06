@@ -3,14 +3,16 @@
 Un website construit pentru un bucatar care ofera servicii personalizate de "bucatar la tine acasa". Aplicatia foloseste un template obtinut de la [Mashup](http://www.mashup-template.com/)<br/><br/>
 
 ### Instructiuni
-Descarcam aplicatia si extragem fisierele intr-un dosar. Din linia de comanda ne deplasam in dosarul aplicatiei
-si instalam mediul virtual pentru Python (este necesar ca Python sa fie instalat in sistem) executand comanda 
-"py -3 -m venv venv" dupa care activam mediul virtual tot din linia de comanda "venv\Scripts\activate".<br>
-Extensiile folosite se regasesc in fiserul requirements.txt. Pentru instalare, se executa din dosarul aplicatiei 
-(dupa ce am activat mediul virtual) comanda "pip install -r requirements.txt". De asemenea se seteaza variabila 
-FLASK_APP din linia de comanda astfel "set FLASK_APP=server.py". Pentru extensia Flask-Mail se vor utiliza 
-doua variabile de mediu, una pentru adresa de email si cealalta pentru parola cu denumirile: GMAIL_ADDR_AFU si 
-GMAIL_PASS_AFU.
+- Descarcam aplicatia si extragem fisierele intr-un dosar. 
+- Din linia de comanda ne deplasam in dosarul aplicatiei si instalam mediul virtual pentru Python 
+(este necesar ca Python sa fie instalat in sistem) executand comanda "py -3 -m venv venv" dupa care activam 
+mediul virtual tot din linia de comanda "venv\Scripts\activate" (pentru SO Windows).
+- Extensiile folosite in aplicatie se regasesc in fiserul requirements.txt. Pentru instalare, se executa din 
+dosarul aplicatiei (dupa ce am activat mediul virtual) comanda "pip install -r requirements.txt". 
+- Se seteaza variabila FLASK_APP din linia de comanda astfel "set FLASK_APP=server.py" (pentru SO Windows). 
+Pentru extensia Flask-Mail sunt necesare doua variabile de mediu, una pentru adresa de email si cealalta 
+pentru parola cu denumirile: GMAIL_ADDR_AFU si GMAIL_PASS_AFU.
+- Pentru a porni server-ul local si a rula aplicatia vom executa din linia de comanda "flask run".
 
 Homepage
 ![homepage](https://github.com/StroeAndrei/Python-BucatarLaTineAcasa/blob/master/screenshots/homepage.PNG)<br/>
