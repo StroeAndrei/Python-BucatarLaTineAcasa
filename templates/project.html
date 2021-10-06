@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main id="main-collapse">
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+
+			<div class="section-container-spacer">
+				<h1>Proiect</h1>
+				<p>
+				"Bucătar la tine acasă" oferă o experiență culinară deosebită în funcție de preferințele tale.
+				Petrecerile ținute acasă se transformă în momente de bucurie lipsite de stres. Mă ocup de tot 
+				ce ai nevoie: cumpărături, gătit, service la masă, curățenia de după. Contactează-mă și îți voi trimite o ofertă 
+				personalizată în funcție de preferințe.
+				</p>
+			</div>
+
+			<div class="section-container-spacer">
+				<p><img class="img-responsive" alt="food" src="{{ url_for('static', filename='assets/images/img-12.jpg') }}"></p>
+
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<p><img class="img-responsive" alt="food" src="{{ url_for('static', filename='assets/images/img-13.jpg') }}"></p>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<p><img class="img-responsive" alt="food" src="{{ url_for('static', filename='assets/images/img-14.jpg') }}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock content %}

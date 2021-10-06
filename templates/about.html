@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main class="" id="main-collapse">
+
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<img class="img-responsive" alt="" src="{{ url_for('static', filename='assets/images/img-10.jpg') }}">
+		</div>
+
+		<div class="col-xs-12 col-md-6">
+			<h1>Despre mine</h1>
+
+			<p>
+				Numele meu este Ion Afumătorici și sunt un bucătar personal. Am locuit și am lucrat
+				mult timp în Italia și Franța unde am avut șansa de a învăța și dezvolta marea mea
+				pasiune pentru bucătărie. Am avut ca îndrumători pe câțiva dintre cei mai mari 
+				maeștrii în arta culinară precum Raymond Blanc, Paul Bocuse și Massimo Bottura.
+			</p>
+
+			<a href="{{ url_for('contact') }}" class="btn btn-primary btn-custom">Contactează-mă</a>
+		</div>
+	</div>
+
+</main>
+
+{% endblock content %}

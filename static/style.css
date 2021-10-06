@@ -1,0 +1,90 @@
+.site-logo {
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+.text-danger {
+	color: #ff0000;
+}
+
+a.text-danger:focus,
+a.text-danger:hover {
+	color: #ff0000;
+}
+
+nav.sidebar .nav > li > a {
+	transition: color 0.15s linear;
+}
+
+nav.sidebar .nav > li > a:hover {
+	color: #9E1753;
+}
+
+a.instagram-icon,
+a.facebook-icon,
+a.twitter-icon,
+a.linkedin-icon {
+	font-size: 20px;
+	transition: color 0.15s linear;
+}
+
+a.instagram-icon:hover {
+	color: #F14E44;
+}
+
+a.facebook-icon:hover,
+a.twitter-icon:hover {
+	color: #1196F5;
+}
+
+a.linkedin-icon:hover {
+	color: #0274B3;
+}
+
+.address-container > li > span > i {
+	font-size: 20px;
+}
+
+#submit, 
+.btn-custom {
+	background-color: #990C4B;
+	border: none;
+	outline: none;
+}
+
+.btn-custom.focus,
+.btn-custom:focus {
+    background-color: #990C4B;
+}
+
+.btn-custom.active.focus,
+.btn-custom.active:focus,
+.btn-custom.active:hover,
+.btn-custom:active.focus,
+.btn-custom:active:focus,
+.btn-custom:active:hover,
+.open>.btn-custom.dropdown-toggle.focus,
+.open>.btn-custom.dropdown-toggle:focus,
+.open>.btn-custom.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+#submit:hover,
+.btn-custom:hover {
+	background-color: #000;
+}
+
+.grid-item .project-description {
+    background: hsla(0, 0%, 100%, .3);
+}
+
+.project-text-inner p {
+	color: #000;
+}
+
+.discover {
+	font-size: 18px;
+}

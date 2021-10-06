@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main id="main-collapse">
+	<div class="row">
+
+		<div class="col-xs-12 section-container-spacer">
+			<h1>Servicii</h1>
+			<p>
+				Realizez meniuri unice pentru preferințele și nevoile tale individuale ori de familie.
+				Achiziționez ingrediente proaspete si de calitatea superioara înainte de vizita la tine
+				acasă.Aranjez și depozitez mâncarea în frigiderul tau. Curăț ustensilele și spațiul în 
+				care am gătit.
+			</p>
+		</div>
+
+		<div class="col-xs-12 col-md-4 section-container-spacer">
+			<img class="img-responsive" alt="" src="{{ url_for('static', filename='assets/images/img-13.jpg') }}">
+			<h2>Meniuri din bucătăria internațională</h2>
+			<p>
+				Surprinde-ți papilele gustative cu un meniu ce îți va aminti de specialitățile încercate în ultima vacanță.
+				Savurează preparate exotice și bucură-te de spectacolul de a avea un bucătar privat la tine acasă.</p>
+			<a href="{{ url_for('contact') }}" class="btn btn-primary btn-custom">Contactează-mă</a>
+		</div>
+
+		<div class="col-xs-12 col-md-4 section-container-spacer">
+			<img class="img-responsive" alt="" src="{{ url_for('static', filename='assets/images/img-15.jpg') }}">
+			<h2>Meniuri zilnice</h2>
+			<p>
+				Uită de grija cozilor la supermarket, a alegerii preparatelor potrivite sau a orelor petrecute în bucătărie.
+				Eu mă ocup de toate acestea pentru tine, ca tu să ai mereu disponibile mâncăruri proaspate, 
+				gustose, indiferent de preferințele alimentare.
+			</p>
+			<a href="{{ url_for('contact') }}" class="btn btn-primary btn-custom">Contactează-mă</a>
+		</div>
+
+		<div class="col-xs-12 col-md-4 section-container-spacer">
+			<img class="img-responsive" alt="" src="{{ url_for('static', filename='assets/images/img-14.jpg') }}">
+			<h2>Evenimente speciale</h2>
+			<p>
+				Cină romantică, onomastică, teambuilding sau nuntă, la toate aceste evenimente preparatele alese 
+				pentru invitați sunt o parte importantă a reușitei. Oricare ar fi evenimentul tău, îl pot transforma 
+				într-unul de neuitat cu preparate surprinzătoare și un serviciu impecabil.
+			</p>
+			<a href="{{ url_for('contact') }}" class="btn btn-primary btn-custom">Contactează-mă</a>
+		</div>
+
+	</div>
+</main>
+
+{% endblock content %}

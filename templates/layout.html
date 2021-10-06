@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="{{ url_for('static', filename='assets/logo_transparent_small.png') }}" rel="icon">
+
+    <title>Afumatorescu</title>
+
+    <link href="./static/main.css" rel="stylesheet">
+    <link href="./static/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <div class="navbar navbar-default visible-xs">
+            <button type="button" class="navbar-toggle collapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    
+        <nav class="sidebar">
+            <div class="navbar-collapse" id="navbar-collapse">
+                <div class="site-header hidden-xs">
+                    <a class="site-brand" href="{{ url_for('homepage') }}">
+                        <img class="img-responsive site-logo" alt="logo" src="{{ url_for('static', filename='assets/logo_transparent_small.png') }}">
+                    </a>
+                    <p>Experiente culinare speciale la tine acasa, evenimente de neuitat.</p>
+                </div>
+
+                {% if request.endpoint == "homepage" %}
+                    {% set active_page = "homepage" %}
+                {% elif request.endpoint == "about" %}
+                    {% set active_page = "about" %}
+                {% elif request.endpoint == "contact" %}
+                    {% set active_page = "contact" %}
+                {% elif request.endpoint == "project" %}
+                    {% set active_page = "project" %}
+                {% elif request.endpoint == "services" %}
+                    {% set active_page = "services" %}
+                {% endif %}
+    
+                <ul class="nav">
+                    <li><a href="{{ url_for('homepage') }}" class="{{ 'active' if active_page == 'homepage' else '' }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}" class="{{ 'active' if active_page == 'about' else '' }}">Despre</a></li>
+                    <li><a href="{{ url_for('services') }}" class="{{ 'active' if active_page == 'services' else '' }}">Servicii</a></li>
+                    <li><a href="{{ url_for('project') }}" class="{{ 'active' if active_page == 'project' else '' }}">Proiect</a></li>
+                    <li><a href="{{ url_for('contact') }}" class="{{ 'active' if active_page == 'contact' else '' }}">Contact</a></li>
+                </ul>
+    
+                <nav class="nav-footer">
+                    <p class="nav-footer-social-buttons">
+                        <a class="fa-icon instagram-icon" href="https://www.instagram.com/" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="fa-icon facebook-icon" href="https://facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="fa-icon twitter-icon" href="https://twitter.com/" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </p>
+                    <p>© Ion Afumatorescu | Construit cu <a href="http://www.mashup-template.com/" target="_blank">Mashup Template</a>/<a href="https://www.unsplash.com/" target="_blank">Unsplash</a></p>
+                </nav>  
+            </div>
+        </nav>
+    </header>
+
+{% block content %}
+{% endblock content %}
+
+<script type="text/javascript">
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+    	navbarToggleSidebar();
+    	navActivePage();
+    });
+
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
+{% if request.endpoint == "homepage"%}
+<script>
+	document.addEventListener("DOMContentLoaded", function (event) {
+		masonryBuild();
+	});
+</script>
+{% endif %}
+
+{% block scripts %}
+{% endblock scripts %}
+
+</body>
+</html>

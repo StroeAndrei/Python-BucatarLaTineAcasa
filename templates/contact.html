@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main id="main-collapse">
+	<div class="row">
+		<div class="col-xs-12">
+
+			<div class="section-container-spacer">
+				<h1>Contact</h1>
+				<p>Completează formularul de mai jos cu datele de contact și trimite un mesaj. Voi răspunde în cel mai scurt timp posibil.</p>
+			</div>
+
+			<div class="section-container-spacer">
+				<form action="{{ url_for('contact') }}" method="POST" class="reveal-content">
+					{{ contact_form.hidden_tag() }}
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								{% if contact_form.email.errors %}
+									{{ contact_form.email(class="form-control", placeholder="Email") }}
+									{% for error in contact_form.email.errors %}
+										<p class="text-danger">{{ error }}</p>
+									{% endfor %}
+								{% else %}
+									{{ contact_form.email(class="form-control", placeholder="Email") }}
+								{% endif %}
+							</div>
+
+							<div class="form-group">
+								{% if contact_form.subject.errors %}
+									{{ contact_form.subject(class="form-control", placeholder="Subiect") }}
+									{% for error in contact_form.subject.errors %}
+										<p class="text-danger">{{ error }}</p>
+									{% endfor %}
+								{% else %}
+									{{ contact_form.subject(class="form-control", placeholder="Subiect") }}
+								{% endif %}
+							</div>
+
+							<div class="form-group">
+								{% if contact_form.message.errors %}
+									{{ contact_form.message(class="form-control", placeholder="Scrie mesaj", rows="5") }}
+									{% for error in contact_form.message.errors %}
+										<p class="text-danger">{{ error }}</p>
+									{% endfor %}
+								{% else %}
+									{{ contact_form.message(class="form-control", placeholder="Scrie mesaj", rows="5") }}
+								{% endif %}
+							</div>
+
+							{{ contact_form.submit(class="btn btn-primary btn-lg btn-custom") }}
+						</div>
+
+						<div class="col-md-6">
+							<ul class="list-unstyled address-container">
+								<li>
+									<span class="fa-icon">
+										<i class="fa fa-phone" aria-hidden="true"></i>
+									</span>
+									0721 111 111
+								</li>
+								<li>
+									<span class="fa-icon">
+										<i class="fa fa-at" aria-hidden="true"></i>
+									</span>
+									IonAfumatorici@mail.com
+								</li>
+								<li>
+									<span class="fa-icon">
+										<i class="fa fa fa-map-marker" aria-hidden="true"></i>
+									</span>
+									Str. Camembert Nr. 66 Bucuresti
+								</li>
+							</ul>
+
+							<h3>Urmărește-mă pe rețelele sociale</h3>
+							<a href="https://www.linkedin.com/" class="fa-icon linkedin-icon" target="_blank">
+								<i class="fa fa-linkedin"></i>
+							</a>
+							<a href="https://twitter.com/" class="fa-icon twitter-icon" target="_blank">
+								<i class="fa fa-twitter"></i>
+							</a>
+							<a href="https://facebook.com/" class="fa-icon facebook-icon" target="_blank">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</div>
+					</div>
+
+				</form>
+			</div>
+
+			<div class="section-container-spacer">
+				<div class="row">
+					<div class="col-md-6">
+						{% with messages = get_flashed_messages(with_categories=true) %}
+							{% if messages %}
+								{% for category, message in messages %}
+								<div class="alert alert-{{ category }}" role="alert">
+									Mesajul a fost transmis.
+								</div>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript">
+
+	document.addEventListener('DOMContentLoaded', () => {
+		alertElement = document.querySelector('.alert');
+
+		if(alertElement) {
+			setTimeout(() => {
+				alertElement.style.display = "none";
+			}, 5000);
+		}
+	});
+
+</script>
+{% endblock scripts %}
