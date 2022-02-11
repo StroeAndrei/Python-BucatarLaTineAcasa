@@ -10,7 +10,7 @@ def write_to_contactCSV(data):
         
         # precizam campurile folosite
         # fieldnames seteaza ordinea de scriere in .csv
-        fieldnames = ['email', 'subiect', 'mesaj']
+        fieldnames = ['email', 'subject', 'message']
         csv_writer = csv.DictWriter(contact, fieldnames=fieldnames)
         
         # construim header-ul fisierului .csv o singura data
